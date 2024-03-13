@@ -23,7 +23,7 @@ const App = () => {
       console.log(output);
     }
     catch(error) {
-        toast.error("Network me koi dikkat hai");
+        toast.error("Network Issue");
     }
     setLoading(false);
   }
