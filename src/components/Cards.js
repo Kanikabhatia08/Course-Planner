@@ -8,10 +8,16 @@ const Cards = (props) => {
     const [likedCourses, setLikedCourses] = useState([]);
     
     function getCourses() {
+      console.log(courses,"kkkkkkkkkkk",Object.values(courses))
         if(category === "All") {
             let allCourses = [];
             Object.values(courses).forEach(array => {
+              
+        
+
+              // console.log(array)
                 array.forEach(courseData => {
+                  // console.log(courseData)
                     allCourses.push(courseData);
                 })
             })

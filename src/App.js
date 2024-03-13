@@ -20,6 +20,7 @@ const App = () => {
       let output = await response.json();
       ///output -> 
       setCourses(output.data);
+      console.log(output);
     }
     catch(error) {
         toast.error("Network me koi dikkat hai");
@@ -27,10 +28,15 @@ const App = () => {
     setLoading(false);
   }
 
+  //change things after render
+
   useEffect(() => {
-    fetchData();
-  }, [])
+    fetchData(); //first render pe
+  },[]) //if not then infinite loop mai chala jayega
   
+  // useEffect(() => {
+  //   console.log("kkkkkk"); //first render pe
+  // })
 
   return (
     <div className="min-h-screen flex flex-col bg-bgDark2">

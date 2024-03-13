@@ -12,6 +12,7 @@ const Card = (props) => {
         if(likedCourses.includes(course.id)) {
             //pehle se like hua pada tha
             setLikedCourses( (prev) => prev.filter((cid)=> (cid !== course.id) )  );
+            console.log(setLikedCourses)
             toast.warning("like removed");
         }
         else {
@@ -19,6 +20,8 @@ const Card = (props) => {
             //insert karna h ye course liked courses me 
             if(likedCourses.length === 0 ) {
                 setLikedCourses([course.id]);
+            console.log(setLikedCourses)
+                
             }
             else {
                 //non-empty pehle se
