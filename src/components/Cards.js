@@ -8,23 +8,20 @@ const Cards = (props) => {
     const [likedCourses, setLikedCourses] = useState([]);
     
     function getCourses() {
-      console.log(courses,"kkkkkkkkkkk",Object.values(courses))
+      // console.log(courses,"coursess",Object.values(courses))
         if(category === "All") {
             let allCourses = [];
-            Object.values(courses).forEach(array => {
-              
-        
-
-              // console.log(array)
+            Object.values(courses).forEach(array => { // to get all the values, excluding the keys
+              // console.log(array,"arayyyy")
                 array.forEach(courseData => {
-                  // console.log(courseData)
+                  // console.log(courseData,"Course data")
                     allCourses.push(courseData);
                 })
             })
             return allCourses;
         }
         else {
-            //main sirf specific categiry ka data array krunga  
+            //specific category courses are returned
             return courses[category];      
         }
 

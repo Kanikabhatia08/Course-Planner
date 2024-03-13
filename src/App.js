@@ -20,7 +20,7 @@ const App = () => {
       let output = await response.json();
       ///output -> 
       setCourses(output.data);
-      console.log(output);
+      // console.log(output);
     }
     catch(error) {
         toast.error("Network Issue");
@@ -29,14 +29,9 @@ const App = () => {
   }
 
   //change things after render
-
   useEffect(() => {
     fetchData(); //first render pe
   },[]) //if not then infinite loop mai chala jayega
-  
-  // useEffect(() => {
-  //   console.log("kkkkkk"); //first render pe
-  // })
 
   return (
     <div className="min-h-screen flex flex-col bg-bgDark2">
